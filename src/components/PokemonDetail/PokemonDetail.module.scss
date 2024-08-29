@@ -1,0 +1,212 @@
+// @import '../../styles/mixins';
+// @import '../../styles/variables';
+
+// .pokemon-header{
+//     padding: 2rem 4rem;
+// }
+
+// .img-card{
+//     height:12rem;
+//     width: 8rem;
+//     border: dashed black;
+//     border-radius: 1rem;
+// }
+
+// .x-close{
+//     margin-top: 2rem;
+//     height: 1.5rem;
+//     width: 1rem;
+//     margin-right: 2rem;
+//     cursor: pointer;
+//     float: right;
+// }
+
+// .popup-description{
+//     margin-left: auto;
+//     margin-top: auto;
+//     background-color: rgb(67, 13, 67);
+// }
+
+// .pokemon-detail{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 0 4rem;
+//     .description{
+//         width: 8rem;
+//         font-size: 1rem;
+//     }
+    
+//     .read-more{
+//         border:none;
+//         background: none;
+//         color: blue;
+//         text-decoration: underline;
+//         cursor: pointer;
+
+
+//         &:hover{
+//             color: darkblue;
+//         }
+//     }
+// }
+
+// .characterstics-2{
+//     width:50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     gap: 3rem;
+//     font-size: 0.7rem;
+// }
+
+// .characterstic-container{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-start;
+//     margin-top: 2rem;
+//     padding: 4rem;
+//     .characterstics-2{
+//         width:8rem;
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: center;
+//         flex-direction: column;
+//         gap: 3rem;
+
+//     }
+//     .characterstics-1{
+//        @extend .characterstics-2
+//     }
+//     .char-group{
+//         @include align-side(flex-direction, column);
+//         box-sizing: border-box;
+//         width: 100%;
+//         .char-group-item{
+//             display:flex;
+//             flex-direction: row;
+//             margin-top: 0.5rem;
+//             font-size: 1rem;
+//             .char-group-box{
+//                 border: 1px solid black;
+//                 border-radius: 0.3rem;
+//                 padding: 0.2rem;
+//             }
+//         }
+//     }
+// }
+
+// .stats{
+//     background-color:$fairy ;
+//     height: fit-content;
+//     padding: 4rem;
+//     margin-top: 2rem;
+//     line-height: 1.5rem;
+//     border-radius: 2rem;
+//     .stat-progress{
+//         display: flex;
+//         justify-content: space-between;
+//         font-size: 0.8rem;
+//         .progress-bar{
+//             height: 1.2rem;
+//             width: 12rem;
+//         }
+//     }
+// }
+
+// .evolution-chain-container{
+//     padding: 3rem;
+//     margin-top: 2rem;
+//     .evolution-chain{
+//         display: flex;
+//         margin-top: 1.5rem;
+//         .img{
+//             display: flex;
+//             align-items: center;
+//             img{
+//                 height: 7rem;
+//                 width: 5rem;
+//             }
+//             .right-arrow{
+//                 margin: 0 0.2rem;
+//             }
+//         }
+//     }
+// }
+
+// .read-more-content{
+//     font-size: 1rem;
+//     margin-top: 1rem;
+// }
+
+
+// @media (min-width: 760px){
+//     .img-card{
+//         height: 15rem;
+//         width: 13rem;
+//         border: dashed black;
+//         border-radius: 1rem;
+//     }
+
+//     .pokemon-detail-overlay{
+//         background-color: rgba(221, 252, 199, 0.3);
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         z-index: 1000;
+//         height: 100vh;
+//         width: 100%;
+//         .pokemon-detail-container{
+//             background: $poison;
+//             padding: 2rem;
+//             border-radius: 0.8rem;
+//             position: relative;
+//             width: 50%;
+//             height: 90vh;
+//             overflow-y: scroll;
+//             display: flex;
+//             flex-direction: column;
+//         }
+//     }
+
+//     .pokemon-detail{
+//         .description-container{
+//             height: 15rem;
+//             width: 13rem;
+//             .description{
+//                 width: 10rem;
+//                 font-size: 1rem;
+//             }
+//             .read-more{
+//                 border:none;
+//                 background: none;
+//                 color: blue;
+//                 text-decoration: underline;
+//                 cursor: pointer;
+//                 &:hover{
+//                     color: darkblue;
+//                 }
+//             }
+//         }
+//     }
+
+//     .evolution-chain-container{
+//         .evolution-chain{
+//             margin-top: 2rem;
+//             justify-content: space-evenly;
+//             .img{
+//                 img{
+//                     height: 14rem;
+//                     width: 10rem;
+//                 }
+//                 .right-arrow{
+//                     margin: '0 0.2rem';
+//                     font-size: 1rem;
+//                     width: 3rem;
+//                 }
+//             }
+//         }
+//     }
+// }
+

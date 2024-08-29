@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.pokemon-card{
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    align-items: center;
+    height: 15rem;
+    cursor: pointer;
+}
+
+.pokemon-image{
+    width:10rem;
+    height:10rem;
+    object-fit: cover;
+}
+
+.card-text{
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    font-size:1rem;
+}
+
+@media (min-width: 768px){
+    .pokemon-image{
+        width:12rem;
+        height:12rem;
+        object-fit: cover;
+    }
+}

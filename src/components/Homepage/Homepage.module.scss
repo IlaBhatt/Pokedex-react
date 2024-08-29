@@ -1,0 +1,140 @@
+@import '../../styles/variables';
+@font-face {
+    font-family: myFont;
+    src: url(../../fonts/PokemonSolid.ttf);
+}
+body{ 
+    font-size: 10px;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    h1{
+        font-family: myFont;
+        color: rgb(16, 16, 127);
+        font-size: 2rem;
+    }
+    .search-text{
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: rgb(16, 16, 127);
+    }
+    hr{
+        width: 85vw;
+    }
+}
+
+
+#scrollableDiv {
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.user-actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:1.5rem;
+    .search-container{
+        display: flex;
+        align-items: center;
+        border: 0.1rem solid #ccc;
+        padding: 0.3rem 0.8rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        margin-right: 0.5rem;
+        max-height: 2.5rem;
+        min-height: 3rem;
+        font-size: 1rem;
+        .search-input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+          }
+        .search-icon {
+            color: #ccc;
+            margin-right: 10px;
+          }
+    }
+    .filter-btn{
+        background-color: #a87fbe;
+        border: none;
+        color: white;
+        padding: 0.8rem 0.8rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s; 
+        &:hover{
+            background-color: #6f1c83;
+        }
+    }
+    .filters{
+        display: none;
+    }
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 0 1.5rem;
+  }
+
+  //styles for tablets and desktops
+@media (min-width: 760px) {
+    .main-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 2rem;
+        h1{
+            font-family: myFont;
+            color: rgb(16, 16, 127);
+            font-size: 2rem;
+        }
+        .search-text{
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: rgb(16, 16, 127);
+            margin-left: 2.5rem;
+        }
+        hr{
+            display: none;
+        }
+    }
+
+    .user-actions{
+        display: flex;
+        justify-content: flex-start;
+        .search-container {
+            width: 40%;
+            padding: 0.8rem;
+        }
+        .filter-btn{
+            display:none;
+        }
+        .filters{
+            display:flex;
+            justify-content: space-evenly;
+            width: 60%;
+            .filter-type{
+                max-width: 15rem;
+                min-width: 8rem;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0 1.5rem;
+      }
+}

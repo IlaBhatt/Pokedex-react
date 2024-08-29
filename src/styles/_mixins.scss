@@ -1,0 +1,19 @@
+@mixin align-center($property: flex-direction, $value: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #{$property}: $value;
+}
+
+@mixin align-side($property: flex-direction, $value: row) {
+    display: flex;
+    justify-content: flex-start;
+    #{$property}: $value;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+

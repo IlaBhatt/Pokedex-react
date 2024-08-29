@@ -1,0 +1,28 @@
+@import "../components/Homepage/Homepage.module.scss";
+@import "../components/PokemonDetail/PokemonDetail.module.scss";
+@import "../components/PokemonCard/PokemonCard.module.scss";
+@import "../components/FilterComponent/FilterComponent.module.scss";
+@import "../components/Modal/Modal.module.scss";
+@import "../styles/variables";
+@import '../styles/mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $electric;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+
+@media (min-width: 768px) {
+    /* Tablet styles here */
+  }
+  
+@media (min-width: 1024px) {
+    /* Desktop styles here */
+  }
