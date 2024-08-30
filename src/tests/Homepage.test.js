@@ -91,5 +91,4 @@ describe('Homepage Component', () => {
     expect(navigate).toHaveBeenCalledWith('/pokemon/1');
   });
 
-  // Additional tests for filters, infinite scroll, and error states can be added following similar patterns
 });

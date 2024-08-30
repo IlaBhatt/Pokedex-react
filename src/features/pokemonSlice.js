@@ -38,9 +38,6 @@ export const fetchPokemonGender = createAsyncThunk('fetchPokemonGender', async()
     try{
         const response = await fetch('https://pokeapi.co/api/v2/gender');
         const {results} = await response.json();
-        // const genderData = results.map(result => 
-        //     `${result.name.chatAt(0).toUpperCase()}${result.name.slice(1)}`
-        // );
         return results;
     }catch(error){
         throw new Error('Failed to fetch data');
@@ -51,9 +48,6 @@ export const fetchPokemonStats = createAsyncThunk('fetchPokemonStats', async() =
     try{
         const response = await fetch('https://pokeapi.co/api/v2/stat');
         const {results} = await response.json();
-        // const genderData = results.map(result => 
-        //     `${result.name.chatAt(0).toUpperCase()}${result.name.slice(1)}`
-        // );
         return results;
     }catch(error){
         throw new Error('Failed to fetch data');

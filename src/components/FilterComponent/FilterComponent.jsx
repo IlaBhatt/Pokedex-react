@@ -27,7 +27,7 @@ const FilterComponent = ({filteredData, setFilteredData}) => {
     const [statsCheckboxes, setStatsCheckboxes] = useState(statsCheckboxInitial);
 
     const toggle = (index) => {
-        if(selected == index){
+        if(selected === index){
             setSelected(null);
         }
         setSelected(index);
@@ -64,8 +64,8 @@ const FilterComponent = ({filteredData, setFilteredData}) => {
     }
 
     const applyAll = () => {
-        const selectedTypes = Object.keys(typeCheckboxes).filter(type => typeCheckboxes[type] == true);
-        const selectedStats = Object.keys(statsCheckboxes).filter(stat => statsCheckboxes[stat] == true);
+        const selectedTypes = Object.keys(typeCheckboxes).filter(type => typeCheckboxes[type] === true);
+        const selectedStats = Object.keys(statsCheckboxes).filter(stat => statsCheckboxes[stat] === true);
         let filterData = filteredData.filter(item => {
             const pokemonTypes = item.details.types.map(type => { return type.type.name});
             const pokemonStats = item.details.stats.map(stat => { return stat.stat.name});
