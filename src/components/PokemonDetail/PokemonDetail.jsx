@@ -40,27 +40,24 @@ const PokemonDetail = () => {
         navigate('/');
     }
     const toggleReadMore = () => {
-        setReadMore(prev => !prev);
+        setReadMore(!readMore);
     }
   return (
     <div className='pokemon-detail-overlay'>
         <div className="pokemon-detail-container">
-        {/* {readMore &&
-            <Modal isOpen={readMore} onClose={toggleReadMore} title="Pokemon Description">
+        {readMore &&
+            <Modal isOpen={readMore} onClose={toggleReadMore} contentStyle={{backgroundColor:'#3d2e5e', color:'white', height: '50vh', width: '90%'}}>
             <div className='read-more-content'>
                 {description}
             </div>
             </Modal> 
-        } */}
-        { readMore && 
-            <div className='popup-description'>
-                {description}
-            </div> 
-        }
-        <FontAwesomeIcon icon={faXmark} className='x-close' onClick={handleClose}/> 
-        <div className='pokemon-header'>
-            <h1>{pokemonDetails.name.toUpperCase()}</h1>
-            <h1>0{pokemonDetails.id}</h1>
+        } 
+        <div className='pokemon-header-container'>
+            <div className='pokemon-header'>
+                <h1>{pokemonDetails.name.toUpperCase()}</h1>
+                <h1>0{pokemonDetails.id}</h1>
+            </div>
+            <FontAwesomeIcon icon={faXmark} className='x-close' onClick={handleClose}/>
         </div>
         <div className='pokemon-detail'>
             <img style={gradientStyle} src={pokemonDetails.sprites.front_shiny} className='img-card'/>  
@@ -140,7 +137,7 @@ const PokemonDetail = () => {
                 <h1>Evolution Chain</h1>  
                 <div className='evolution-chain'>
                     {
-                        pokemonData.results.slice(pokemonId-3 >= 0 ? pokemonId-3 : 0, pokemonId).map((pokemonData, index) =>
+                        pokemonData.results.slice(pokemonId-3 >= 0 ? pokemonId-3 : 0, pokemonId ).map((pokemonData, index) =>
                         <div className='img'>
                             <img style={getBgColor(pokemonData.details)} src={pokemonData.details.sprites.front_shiny} className='img-card' key={index}/>
                             {index!==2  && <FontAwesomeIcon icon={faArrowRight} className='right-arrow'/>}

@@ -17,3 +17,10 @@
     align-items: center;
 }  
 
+@mixin button-style {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 4rem;
+    background: white;
+    cursor: pointer;
+}

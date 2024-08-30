@@ -91,7 +91,7 @@ const FilterComponent = ({filteredData, setFilteredData}) => {
                         {filter === 'Type' && <div className='type-items'>
                             {types.map((type) => (
                                 <label className='type-item'>
-                                    <input type='checkbox' name={type} checked={typeCheckboxes[type]} onChange={(e) => handleChangeType(e)}/>
+                                    <input type='checkbox' name={type} checked={typeCheckboxes[type]} onChange={(e) => handleChangeType(e)} style={{marginRight: '3px'}}/>
                                     {capitalizeFirstLetter(type)}
                                 </label>
                             ))}
@@ -99,7 +99,7 @@ const FilterComponent = ({filteredData, setFilteredData}) => {
                         {filter === 'Gender' && <div className='type-items'>
                             {gender.map((type) => (
                                 <label className='type-item'>
-                                    <input type='checkbox' name={type.name} checked={genderCheckboxes[type.name]} onChange={(e) => handleChangeGender(e)}/>
+                                    <input type='checkbox' name={type.name} checked={genderCheckboxes[type.name]} onChange={(e) => handleChangeGender(e)} style={{marginRight: '3px'}}/>
                                     {capitalizeFirstLetter(type.name)}
                                 </label>
                             ))}
@@ -107,7 +107,7 @@ const FilterComponent = ({filteredData, setFilteredData}) => {
                         {filter === 'Stats' && <div className='type-items'>
                             {stats.map((type) => (
                                 <label className='type-item'>
-                                    <input type='checkbox' name={type.name} checked={statsCheckboxes[type.name]} onChange={(e) => handleChangeStat(e)}/>
+                                    <input type='checkbox' name={type.name} checked={statsCheckboxes[type.name]} onChange={(e) => handleChangeStat(e)} style={{marginRight: '3px'}}/>
                                     {capitalizeFirstLetter(type.name)}
                                 </label>
                             ))}

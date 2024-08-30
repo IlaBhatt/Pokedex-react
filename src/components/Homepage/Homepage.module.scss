@@ -3,16 +3,13 @@
     font-family: myFont;
     src: url(../../fonts/PokemonSolid.ttf);
 }
-body{ 
-    font-size: 10px;
-}
 
 .main-header{
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
     h1{
-        font-family: myFont;
+        font-family: 'myFont';
         color: rgb(16, 16, 127);
         font-size: 2rem;
     }
@@ -89,15 +86,8 @@ body{
   //styles for tablets and desktops
 @media (min-width: 760px) {
     .main-header{
-        display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 2rem;
-        h1{
-            font-family: myFont;
-            color: rgb(16, 16, 127);
-            font-size: 2rem;
-        }
         .search-text{
             margin-top: 0.5rem;
             font-size: 1rem;
@@ -110,7 +100,6 @@ body{
     }
 
     .user-actions{
-        display: flex;
         justify-content: flex-start;
         .search-container {
             width: 40%;

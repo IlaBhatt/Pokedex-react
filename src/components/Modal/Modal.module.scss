@@ -8,24 +8,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
     z-index: 1000;
-  }
-  
-  .modal-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 0.8rem;
-    position: relative;
-    width: 70%;
-    height: 90vh;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
+    overflow: hidden;
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.8rem;
+      position: relative;
+      width: 70%;
+      height: 90vh;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    
   }
 
   .close-button {
@@ -34,5 +37,8 @@
     border: none;
     background: none;
     cursor: pointer;
+    top: 10px;
+    right: 10px;
+    color: gray;
   }
   
